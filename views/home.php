@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+session_start();
 
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -48,5 +50,11 @@
     <script src="assets/js/desc.js"></script>
     <script defer="defer" src="assets/js/particlesjs/particles.js"></script>
 </body>
+}else{
 
+     header("Location: index.php");
+
+     exit();
+
+}
 </html>
